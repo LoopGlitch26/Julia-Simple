@@ -23,7 +23,7 @@ julia>
 show("shows everything")
 
 
-#Input
+# Input
 readline()
 readline(STDIN) #v.0.6
 readline(stdin) #v.1.0
@@ -36,13 +36,13 @@ gon
 
 =#
 
-#Scope of Variable
+# Scope of Variable
 global y = 1
 local x = 1
 let i = 12
 end
 
-#Strings
+# Strings
 
 str = "Hello julia"
 typeof(str)
@@ -52,7 +52,7 @@ typeof(char)
 char = "H"
 typeof(char)
 
-#Strings Indexing
+# Strings Indexing
 str[1:end]
 str[2:5]
 reverse(str)
@@ -101,7 +101,7 @@ julia> str[end-1]
 
 =#
 
-#String Concat
+# String Concat
 a = "Hello World"
 b = "Greetings"
 string(a,",",b)
@@ -123,7 +123,55 @@ julia> a * "," * b
 
 =#
 
-#Strings Interpolation
+# Strings Interpolation
 "$a $b" # "Hello World Greetings"
-"1 + 3 = $(1+3)" # "1 + 3 = 4"
+"1 + 3 = $(13)" # "1 + 3 = 4"
 
+name = "Bravish"
+"My name is $name" # "My name is Bravish"
+
+# String Manipulation
+uppercase(str)
+lowercase(str)
+titlecase(str)
+length(str)
+split(str,"l")
+repeat(str,10)
+occursin("Julia",str)
+SubString(str,1,7)
+
+#=
+
+
+julia> uppercase(str)
+"HELLO JULIA"
+
+julia> lowercase(str)
+"hello julia"
+
+julia> titlecase(str)
+"Hello Julia"
+
+julia> length(str)
+11
+
+julia> split(str,"l")
+4-element Array{SubString{String},1}:
+ "He"
+ ""
+ "o ju"
+ "ia"
+
+julia> repeat(str,10)
+"Hello juliaHello juliaHello juliaHello juliaHello juliaHello juliaHello juliaHello juliaHello juliaHello julia"
+
+julia> repeat(str,10)
+"Hello juliaHello juliaHello juliaHello juliaHello juliaHello juliaHello juliaHello juliaHello juliaHello julia"
+
+julia> occursin("Julia",str)
+false
+
+julia> SubString(str,1,7)
+"Hello j"
+
+=#
