@@ -56,6 +56,9 @@ typeof(char)
 str[1:end]
 str[2:5]
 reverse(str)
+str[end:-1]
+str[end:-1:1]
+str[end-1]
 
 #= 
 
@@ -87,5 +90,40 @@ julia> str[2:5]
 julia> reverse(str)
 "ailuj olleH"
 
+julia> str[end:-1]
+""
+
+julia> str[end:-1:1]
+"ailuj olleH"
+
+julia> str[end-1]
+'i': ASCII/Unicode U+0069 (category Ll: Letter, lowercase)
+
 =#
+
+#String Concat
+a = "Hello World"
+b = "Greetings"
+string(a,",",b)
+a * "," * b
+
+#=
+
+julia> a = "Hello World"
+"Hello World"
+
+julia> b = "Greetings"
+"Greetings"
+
+julia> string(a,",",b)
+"Hello World,Greetings"
+
+julia> a * "," * b
+"Hello World,Greetings"
+
+=#
+
+#Strings Interpolation
+"$a $b" # "Hello World Greetings"
+"1 + 3 = $(1+3)" # "1 + 3 = 4"
 
